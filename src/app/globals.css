@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Space Grotesk", "Outfit", sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  --color-deep-navy: #2A2A2A;
+  --color-dark-slate: #353535;
+  --color-soft-cream: #E8E0D8;
+  --color-muted-sage: #8A8278;
+  --color-clay: #C47A4E;
+  --color-clay-light: #D8976E;
+  --color-clay-dark: #8C5A38;
+  --color-code-green: #22C55E;
+  --color-warm-coral: #E8915A;
+}
+
+html { scroll-behavior: auto; }
+
+body {
+  background: linear-gradient(180deg, #2A2A2A 0%, #3A3A3A 100%);
+  color: var(--color-soft-cream);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--color-clay); color: var(--color-deep-navy); }
+
+#loader {
+  position: fixed; inset: 0;
+  background: #2A2A2A;
+  color: var(--color-soft-cream);
+  display: grid; place-items: center; z-index: 9999;
+  font-family: var(--font-mono);
+}
+
+/* === CODE BACKGROUND === */
+.code-wall {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.code-wall img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.08;
+}
+.code-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* === CUSTOM CURSOR === */
+.custom-cursor {
+  width: 8px; height: 8px;
+  background: var(--color-clay);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  mix-blend-mode: difference;
+  transition: width 0.2s, height 0.2s, background 0.2s;
+}
+.custom-cursor.hovering {
+  width: 40px; height: 40px;
+  background: rgba(196,122,78,0.15);
+  border: 1px solid var(--color-clay);
+}
+
+/* === GLASS === */
+.glass-card {
+  background: rgba(34,34,34,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(196,122,78,0.08);
+  border-radius: 12px;
+}
+
+/* === POLAROID === */
+.polaroid-card {
+  background: var(--color-dark-slate);
+  padding: 6px 6px 28px 6px;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  transform: rotate(var(--rot, 0deg));
+  transition: transform 0.3s ease;
+}
+.polaroid-card:hover {
+  transform: rotate(0deg) scale(1.05);
+  z-index: 10;
+}
+
+/* === FOCUS RINGS === */
+:focus-visible {
+  outline: 2px solid var(--color-clay);
+  outline-offset: 2px;
+}
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--color-clay);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* === 3D LAYERED TEXT === */
+.text-layer-3d {
+  position: relative;
+  display: inline-block;
+}
+.text-layer-3d::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(196,122,78,0.15);
+  z-index: -2;
+  transform: translate(4px, 4px);
+}
+.text-layer-3d::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(196,122,78,0.08);
+  z-index: -1;
+  transform: translate(2px, 2px);
+}
+
+/* === PERSPECTIVE === */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* === SCROLL INDICATOR === */
+.scroll-indicator {
+  width: 22px; height: 36px;
+  border: 2px solid rgba(232,224,216,0.2);
+  border-radius: 11px;
+  display: flex; justify-content: center;
+  padding-top: 7px;
+}
+.scroll-indicator::after {
+  content: "";
+  width: 3px; height: 7px;
+  background: var(--color-soft-cream);
+  border-radius: 2px;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
