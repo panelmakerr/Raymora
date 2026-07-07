@@ -26,7 +26,7 @@ export async function POST(request: Request) {
       const { Resend } = await import("resend");
       const resend = new Resend(resendKey);
       await resend.emails.send({
-        from: "BWN × BOSS <onboarding@resend.dev>",
+        from: "Raymora <onboarding@resend.dev>",
         to: ADMIN_EMAIL,
         subject: `New Contact: ${name}`,
         text: `From: ${name} (${email})\n\n${message}`,

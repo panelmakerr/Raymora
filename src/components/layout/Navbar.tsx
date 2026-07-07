@@ -39,8 +39,8 @@ export default function Navbar() {
           aria-label="Main navigation"
         >
           <div className="flex items-center justify-between">
-            <a href="/" className="font-serif text-lg tracking-wider text-soft-cream" aria-label="BWN x BOSS home">
-              BWN<span className="text-clay">×</span>BOSS
+            <a href="/" className="font-serif text-lg tracking-wider text-soft-cream" aria-label="Raymora home">
+              Raymora
             </a>
             <div className="hidden md:flex items-center gap-8">
               {links.map((link) => (

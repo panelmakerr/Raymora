@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About — BWN × BOSS",
-  description: "A two-person team delivering premium web solutions — BWN builds, BOSS connects.",
+  title: "About — Raymora",
+  description: "Raymora — premium web development agency crafting intentional digital experiences.",
 };
 
 export default function AboutPage() {
@@ -16,20 +16,11 @@ export default function AboutPage() {
 
         <div className="space-y-6 text-muted-sage leading-relaxed max-w-2xl">
           <p>
-            BWN × BOSS is a two-person web development agency. We build premium websites
-            and dashboards for clients who refuse to settle for template-based design.
+            Raymora is a premium web development agency. We build custom websites,
+            dashboards, and digital tools for clients who refuse to settle for template-based design.
           </p>
           <p>
-            <span className="text-soft-cream">BWN</span> is the engineer — frontend, backend,
-            architecture, deployment. Every line is intentional. Every animation, considered.
-            Every pixel, accounted for.
-          </p>
-          <p>
-            <span className="text-soft-cream">BOSS</span> is the bridge — client conversations,
-            project management, strategy, and delivery. Making sure every client feels heard
-            and every project ships on time.
-          </p>
-          <p>
+            Every line is intentional. Every animation, considered. Every pixel, accounted for.
             We don&apos;t do templates. We don&apos;t cut corners. We build digital experiences
             that convert visitors into paying clients — clean code, fast performance,
             and design that works.

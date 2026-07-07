@@ -2,8 +2,8 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects — BWN × BOSS",
-  description: "A curated selection of premium digital experiences built by BWN × BOSS.",
+  title: "Projects — Raymora",
+  description: "A curated selection of premium digital experiences built by Raymora.",
 };
 
 const projects = [

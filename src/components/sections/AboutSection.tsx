@@ -18,9 +18,9 @@ export default function AboutSection() {
             Code is{" "}<span className="text-clay italic">Craft</span>
           </h2>
           <p className="text-muted-sage text-base leading-relaxed max-w-xl mx-auto">
-            We&apos;re a team of two — BWN builds frontend, backend, and everything
-            in between. BOSS ensures every client feels heard and delivered.
-            Together, we create premium digital experiences.
+            Raymora is a premium web development agency built on precision.
+            Every project is crafted with intentional design, clean architecture,
+            and a commitment to quality that speaks for itself.
           </p>
         </ScrollReveal>
       </div>

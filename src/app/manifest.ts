@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "BWN × BOSS — Premium Web Development Agency",
-    short_name: "BWN×BOSS",
+    name: "Raymora — Premium Web Development Agency",
+    short_name: "Raymora",
     description: "Premium web development agency crafting custom websites and dashboards.",
     start_url: "/",
     display: "standalone",

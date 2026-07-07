@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Offline — BWN × BOSS",
+  title: "Offline — Raymora",
 };
 
 export default function Offline() {

@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Splash() {
   const [show, setShow] = useState(true);
   const [text, setText] = useState("");
-  const fullText = "BWN x BOSS";
+  const fullText = "Raymora";
 
   useEffect(() => {
     let i = 0;

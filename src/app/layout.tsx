@@ -22,21 +22,21 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BWN × BOSS — Premium Web Development Agency",
+  title: "Raymora — Premium Web Development Agency",
   description:
-    "BWN × BOSS — premium web development agency crafting custom websites, dashboards, and tools with precision engineering and intentional design.",
+    "Raymora — premium web development agency crafting custom websites, dashboards, and tools with precision engineering and intentional design.",
   icons: { icon: "/favicon.svg" },
   openGraph: {
-    title: "BWN × BOSS — Premium Web Development Agency",
-    description: "Precision engineering meets creative vision. Premium web development by BWN × BOSS.",
-    url: "https://bwnxboss.com",
-    siteName: "BWN × BOSS",
+    title: "Raymora — Premium Web Development Agency",
+    description: "Precision engineering meets creative vision. Premium web development by Raymora.",
+    url: "https://raymora.dev",
+    siteName: "Raymora",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BWN × BOSS — Premium Web Development Agency",
+    title: "Raymora — Premium Web Development Agency",
     description: "Precision engineering meets creative vision.",
   },
 };

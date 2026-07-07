@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "404 — BWN × BOSS",
+  title: "404 — Raymora",
 };
 
 export default function NotFound() {

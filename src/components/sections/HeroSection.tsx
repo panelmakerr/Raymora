@@ -42,7 +42,7 @@ export default function HeroSection() {
           whileHover={{ scale: 1.1, opacity: 0.5, rotate: 0 }}
         >
           <div className="bg-dark-slate/70 backdrop-blur-sm p-3 rounded-lg border border-clay/10 font-mono text-xs text-muted-sage shadow-xl">
-            <p className="text-code-green">// BWN x BOSS</p>
+            <p className="text-code-green">// Raymora</p>
             <p className="text-clay">const agency = &quot;premium&quot;;</p>
             <p className="text-muted-sage">console.log(agency);</p>
           </div>
@@ -83,7 +83,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="text-base md:text-lg text-muted-sage max-w-xl mx-auto leading-relaxed"
         >
-          BWN × BOSS &mdash; where precision engineering meets creative vision.
+          Raymora &mdash; where precision engineering meets creative vision.
           We craft premium websites, dashboards, and tools
           that convert visitors into paying clients.
         </motion.p>
