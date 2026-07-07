@@ -31,6 +31,20 @@ export default function HeroSection() {
         <div className="code-overlay" />
       </motion.div>
 
+      {/* Floating YouTube embed - muted autoplay */}
+      <div className="absolute z-[2] hidden lg:block preserve-3d" style={{ left: "82%", top: "55%" }}>
+        <div className="bg-dark-slate/70 backdrop-blur-sm p-2 rounded-lg border border-clay/10 shadow-xl w-[200px]">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/jfKfPfyJRdk?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+            className="w-full aspect-video rounded"
+            allow="autoplay; encrypted-media"
+            title="YouTube"
+            loading="lazy"
+          />
+          <p className="text-[10px] text-muted-sage/50 text-center mt-1 font-mono">// youtube.com/@Raymoraofficial</p>
+        </div>
+      </div>
+
       {snippets.map((s, i) => (
         <motion.div
           key={i}
