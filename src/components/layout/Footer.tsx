@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -8,9 +10,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
           <div>
-            <p className="font-serif text-xl tracking-wider text-soft-cream">
-              Raymora
-            </p>
+            <Image src="/images/logo.png" alt="Raymora" width={120} height={32} className="h-8 w-auto" />
             <p className="text-sm text-muted-sage mt-2 max-w-xs">
               Precision engineering meets creative vision. Premium web development agency.
             </p>

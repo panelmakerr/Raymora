@@ -1,24 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Splash() {
   const [show, setShow] = useState(true);
-  const [text, setText] = useState("");
-  const fullText = "Raymora";
 
   useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      setText(fullText.slice(0, i + 1));
-      i++;
-      if (i >= fullText.length) {
-        clearInterval(interval);
-        setTimeout(() => setShow(false), 800);
-      }
-    }, 200);
-    return () => clearInterval(interval);
+    setTimeout(() => setShow(false), 1500);
   }, []);
 
   return (
@@ -29,13 +19,13 @@ export default function Splash() {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <motion.p className="text-2xl md:text-4xl tracking-widest"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
           >
-            {text}
-            <span className="animate-pulse ml-1 text-clay">|</span>
-          </motion.p>
+            <Image src="/images/logo.png" alt="Raymora" width={180} height={48} className="h-12 w-auto opacity-80" />
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>

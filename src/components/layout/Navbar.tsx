@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import CopyButton from "@/components/ui/CopyButton";
 
@@ -40,8 +41,8 @@ export default function Navbar() {
           aria-label="Main navigation"
         >
           <div className="flex items-center justify-between">
-            <a href="/" className="font-serif text-lg tracking-wider text-soft-cream" aria-label="Raymora home">
-              Raymora
+            <a href="/" className="flex items-center gap-2" aria-label="Raymora home">
+              <Image src="/images/logo.png" alt="Raymora" width={100} height={28} className="h-7 w-auto" />
             </a>
             <div className="hidden md:flex items-center gap-8">
               {links.map((link) => (
