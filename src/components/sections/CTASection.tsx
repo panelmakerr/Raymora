@@ -1,6 +1,7 @@
 "use client";
 
 import ScrollReveal from "@/components/animations/ScrollReveal";
+import CopyButton from "@/components/ui/CopyButton";
 
 export default function CTASection() {
   return (
@@ -14,22 +15,27 @@ export default function CTASection() {
           <p className="text-muted-sage mb-4 max-w-md mx-auto">
             Tell us about your project. We&apos;ll get back to you within 24 hours.
           </p>
-          <p className="text-sm text-clay font-mono mb-8">
-            raymorahq@gmail.com
-          </p>
+          <div className="mb-8">
+            <CopyButton
+              text="raymorahq@gmail.com"
+              className="text-sm text-clay font-mono hover:text-clay-light transition-colors"
+            >
+              raymorahq@gmail.com
+            </CopyButton>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:raymorahq@gmail.com"
+            <CopyButton
+              text="raymorahq@gmail.com"
               className="inline-block bg-clay text-soft-cream px-10 py-4 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-clay-light hover:scale-105"
             >
-              Start Your Project
-            </a>
-            <a
-              href="tel:+923712385700"
+              Copy Email
+            </CopyButton>
+            <CopyButton
+              text="+923712385700"
               className="inline-block border border-clay/30 text-soft-cream px-10 py-4 rounded-full text-sm tracking-wide transition-all duration-300 hover:bg-clay/10"
             >
-              Call +92 3712385700
-            </a>
+              Copy Number
+            </CopyButton>
           </div>
         </ScrollReveal>
       </div>

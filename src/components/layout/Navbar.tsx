@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import CopyButton from "@/components/ui/CopyButton";
 
 interface Link {
   href: string;
@@ -52,12 +53,12 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="mailto:raymorahq@gmail.com"
+              <CopyButton
+                text="raymorahq@gmail.com"
                 className="inline-block px-6 py-2 text-sm bg-clay text-soft-cream rounded-full transition-all duration-300 hover:bg-clay-light hover:shadow-lg hover:shadow-clay/20"
               >
                 Start Project
-              </a>
+              </CopyButton>
             </div>
             <button
               className="md:hidden flex flex-col gap-1.5 p-2"
@@ -81,9 +82,9 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <a href="/contact" className="text-sm text-soft-cream bg-clay rounded-full px-4 py-2 text-center" onClick={() => setMenuOpen(false)}>
+              <CopyButton text="raymorahq@gmail.com" className="text-sm text-soft-cream bg-clay rounded-full px-4 py-2 text-center w-full">
                 Start Project
-              </a>
+              </CopyButton>
             </motion.div>
           )}
         </motion.nav>
