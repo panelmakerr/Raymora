@@ -6,7 +6,7 @@ interface ContactBody {
   message: string;
 }
 
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "frixonplayz@gmail.com";
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "raymorahq@gmail.com";
 
 export async function POST(request: Request) {
   try {

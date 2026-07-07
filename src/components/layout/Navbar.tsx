@@ -53,7 +53,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="/contact"
+                href="mailto:raymorahq@gmail.com"
                 className="inline-block px-6 py-2 text-sm bg-clay text-soft-cream rounded-full transition-all duration-300 hover:bg-clay-light hover:shadow-lg hover:shadow-clay/20"
               >
                 Start Project
