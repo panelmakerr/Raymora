@@ -31,19 +31,21 @@ export default function HeroSection() {
         <div className="code-overlay" />
       </motion.div>
 
-      {/* Floating YouTube embed - muted autoplay */}
-      <div className="absolute z-[2] hidden lg:block preserve-3d" style={{ left: "82%", top: "55%" }}>
-        <div className="bg-dark-slate/70 backdrop-blur-sm p-2 rounded-lg border border-clay/10 shadow-xl w-[200px]">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/jfKfPfyJRdk?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-            className="w-full aspect-video rounded"
-            allow="autoplay; encrypted-media"
-            title="YouTube"
-            loading="lazy"
-          />
-          <p className="text-[10px] text-muted-sage/50 text-center mt-1 font-mono">// youtube.com/@Raymoraofficial</p>
+      {/* Floating YouTube logo */}
+      <a
+        href="https://www.youtube.com/@Raymoraofficial"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute z-[2] hidden lg:block preserve-3d transition-transform duration-300 hover:scale-110"
+        style={{ left: "84%", top: "58%" }}
+      >
+        <div className="bg-dark-slate/70 backdrop-blur-sm p-3 rounded-lg border border-clay/10 shadow-xl text-center">
+          <svg viewBox="0 0 24 24" className="w-8 h-8 mx-auto text-red-500" fill="currentColor">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          <p className="text-[10px] text-muted-sage/60 mt-1 font-mono">@Raymoraofficial</p>
         </div>
-      </div>
+      </a>
 
       {snippets.map((s, i) => (
         <motion.div
