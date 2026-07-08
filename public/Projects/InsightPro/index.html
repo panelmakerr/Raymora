@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsightPro — B2B SaaS Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;background:#0a0a0c;color:#fff;overflow-x:hidden;line-height:1.6}
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:#0a0a0c}
+    ::-webkit-scrollbar-thumb{background:#4F46E5;border-radius:3px}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#0a0a0c 0%,#0c0a14 40%,#0a0620 70%,#0a0a0c 100%)}
+    .hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 50% 30%,rgba(79,70,229,0.12) 0%,transparent 50%),radial-gradient(circle at 50% 70%,rgba(6,182,212,0.08) 0%,transparent 50%);animation:heroGlow 10s ease-in-out infinite alternate}
+    @keyframes heroGlow{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-3%,-3%) scale(1.03)}}
+    .hero-content{position:relative;z-index:2;max-width:640px}
+    .hero-badge{display:inline-block;border:1px solid rgba(79,70,229,0.3);color:#4F46E5;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:2px;padding:6px 16px;border-radius:100px;margin-bottom:24px}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,7vw,5rem);line-height:1.1;margin-bottom:20px}
+    .hero h1 span{background:linear-gradient(135deg,#4F46E5,#06B6D4,#4F46E5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero p{color:#a0a0a0;font-size:clamp(1rem,2vw,1.2rem);max-width:520px;margin-bottom:36px}
+    .hero-buttons{display:flex;gap:16px;flex-wrap:wrap}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#4F46E5,#06B6D4);color:#fff;padding:14px 32px;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;transition:all .3s;border:none;cursor:pointer}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(79,70,229,0.3)}
+    .btn-outline{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,0.15);color:#fff;padding:14px 32px;border-radius:12px;font-weight:500;font-size:14px;text-decoration:none;transition:all .3s;background:transparent}
+    .btn-outline:hover{border-color:#4F46E5;background:rgba(79,70,229,0.08)}
+    .hero-visual{position:absolute;right:-10%;top:50%;transform:translateY(-50%);width:50%;height:70%;z-index:1}
+    .hero-visual .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.4}
+    .hero-visual .orb:nth-child(1){width:400px;height:400px;background:#4F46E5;top:10%;right:20%;animation:float 8s ease-in-out infinite}
+    .hero-visual .orb:nth-child(2){width:300px;height:300px;background:#06B6D4;bottom:20%;right:10%;animation:float 10s ease-in-out infinite reverse}
+    .hero-visual .orb:nth-child(3){width:250px;height:250px;background:#4F46E5;top:40%;right:40%;animation:float 12s ease-in-out infinite;opacity:0.2}
+    @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(-30px,-40px)}}
+    .features{padding:120px 0;background:#0a0a0c;position:relative}
+    .features::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(79,70,229,0.3),transparent)}
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:60px}
+    .feature-card{background:linear-gradient(135deg,rgba(255,255,255,0.03),rgba(79,70,229,0.05));border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:32px;transition:all .4s}
+    .feature-card:hover{border-color:rgba(79,70,229,0.3);transform:translateY(-4px);box-shadow:0 20px 60px rgba(79,70,229,0.08)}
+    .feature-card .icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;background:linear-gradient(135deg,rgba(79,70,229,0.2),rgba(6,182,212,0.1))}
+    .feature-card h3{font-size:18px;font-weight:600;margin-bottom:10px}
+    .feature-card p{color:#a0a0a0;font-size:14px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:80px 0;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
+    .stat-item{text-align:center}
+    .stat-item .num{font-size:clamp(2rem,4vw,3rem);font-weight:800;background:linear-gradient(135deg,#4F46E5,#06B6D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .stat-item .label{color:#a0a0a0;font-size:13px;margin-top:4px}
+    .cta{padding:120px 0;text-align:center;position:relative}
+    .cta h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:16px}
+    .cta p{color:#a0a0a0;max-width:480px;margin:0 auto 32px}
+    footer{padding:40px 0;border-top:1px solid rgba(255,255,255,0.06);text-align:center}
+    footer .watermark{display:flex;align-items:center;justify-content:center;gap:8px;color:#666;font-size:13px}
+    footer .watermark strong{color:#4F46E5;font-weight:600}
+    @media(max-width:768px){.hero-visual{display:none}.stats{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.stats{grid-template-columns:1fr}.hero-buttons{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">📊 Enterprise Analytics</div>
+      <h1>Decide with <span>InsightPro</span></h1>
+      <p>A powerful business intelligence platform with real-time data visualization, custom reporting, and AI-driven insights for data-driven teams.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary">Start Free Trial →</a>
+        <a href="#" class="btn-outline">Book a Demo</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="orb"></div>
+      <div class="orb"></div>
+      <div class="orb"></div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div style="text-align:center;max-width:600px;margin:0 auto">
+        <p style="color:#4F46E5;font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-bottom:12px">Platform Features</p>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem)">Turn Data into Decisions</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon">📈</div>
+          <h3>Real-Time Dashboards</h3>
+          <p>Live data visualization with drag-and-drop widgets and customizable views for every team.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📋</div>
+          <h3>Custom Reports</h3>
+          <p>Build and schedule automated reports with AI-generated insights and anomaly detection.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🤖</div>
+          <h3>AI Predictions</h3>
+          <p>Forecast trends, identify patterns, and get proactive recommendations powered by ML.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🔗</div>
+          <h3>Data Integrations</h3>
+          <p>Connect 100+ data sources including SQL, APIs, cloud services, and spreadsheets.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">👥</div>
+          <h3>Team Collaboration</h3>
+          <p>Shared workspaces with annotations, comments, and role-based access control.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📱</div>
+          <h3>Mobile BI</h3>
+          <p>Full analytics experience on mobile with push alerts for key metric changes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="stats">
+      <div class="stat-item">
+        <div class="num">1M+</div>
+        <div class="label">Data Points/Min</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">500+</div>
+        <div class="label">Enterprise Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">99.9%</div>
+        <div class="label">Platform Uptime</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">40%</div>
+        <div class="label">Faster Decisions</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="cta">
+    <div class="container">
+      <h2>See What Your Data Is Saying</h2>
+      <p>Join leading enterprises that use InsightPro to uncover hidden opportunities and make smarter decisions faster.</p>
+      <a href="#" class="btn-primary" style="margin:0 auto">Start Free Trial →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="watermark">
+        <span>Built by</span>
+        <strong>Raymora</strong>
+        <span>— Premium Web Development Agency</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
