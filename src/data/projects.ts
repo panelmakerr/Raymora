@@ -63,6 +63,33 @@ const projects: Project[] = [
     year: "2024",
     liveUrl: "https://github.com/panelmakerr/InsightPro",
   },
+  {
+    title: "StreamVibe",
+    niche: "Streaming / Entertainment",
+    img: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&q=75",
+    prd: "Unified streaming layer that learns your taste and pulls great film and series from everywhere, with watch parties and live sync.",
+    tech: "Next.js, Mux, TMDB, Supabase Realtime, OpenAI",
+    year: "2025",
+    liveUrl: "https://streamvibe-tau-two.vercel.app/",
+  },
+  {
+    title: "FoodieHub",
+    niche: "Food / Restaurant Discovery",
+    img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=75",
+    prd: "Personalized restaurant discovery with live wait times, taste-graph recommendations, and one-tap reservations across thousands of venues.",
+    tech: "Next.js, PostGIS, Stripe, Supabase, ML",
+    year: "2025",
+    liveUrl: "https://foodiehub-5i21m3zw3-bwn-x-boss.vercel.app/",
+  },
+  {
+    title: "GreenLeaf",
+    niche: "Sustainability / Climate",
+    img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=75",
+    prd: "Carbon tracking and smart-swap engine with community impact rings and vetted offsets that turn small habits into real planet impact.",
+    tech: "Next.js, Plaid, Supabase Realtime, OpenAI, Stripe",
+    year: "2025",
+    liveUrl: "https://green-leaf-two.vercel.app/",
+  },
 ];
 
 export default projects;
