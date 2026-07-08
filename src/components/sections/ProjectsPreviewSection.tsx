@@ -4,61 +4,9 @@ import Image from "next/image";
 import { useRef, type MouseEvent } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ScrollReveal from "@/components/animations/ScrollReveal";
+import projects from "@/data/projects";
 
-interface Project {
-  title: string;
-  niche: string;
-  img: string;
-  prd: string;
-  url: string;
-}
-
-const projects: Project[] = [
-  {
-    title: "ShopWave",
-    niche: "E-Commerce / Retail",
-    img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=75",
-    prd: "Multi-vendor marketplace with real-time inventory, AI recommendations, and seamless checkout.",
-    url: "#",
-  },
-  {
-    title: "MediTrack",
-    niche: "HealthTech",
-    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=75",
-    prd: "Patient management dashboard with appointment scheduling, EMR integration, and analytics.",
-    url: "#",
-  },
-  {
-    title: "PaySwift",
-    niche: "FinTech",
-    img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=75",
-    prd: "Digital payment platform with instant transfers, budgeting tools, and multi-currency support.",
-    url: "#",
-  },
-  {
-    title: "PropVue",
-    niche: "Real Estate / PropTech",
-    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=75",
-    prd: "Property listing portal with virtual tours, AI pricing estimates, and agent CRM.",
-    url: "#",
-  },
-  {
-    title: "LearnCraft",
-    niche: "EdTech",
-    img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=75",
-    prd: "Online learning platform with live classes, progress tracking, and interactive assessments.",
-    url: "#",
-  },
-  {
-    title: "InsightPro",
-    niche: "B2B SaaS / Analytics",
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=75",
-    prd: "Business intelligence dashboard with real-time data viz, custom reports, and team collaboration.",
-    url: "#",
-  },
-];
-
-function BrowserMockup({ project, i }: { project: Project; i: number }) {
+function BrowserMockup({ project, i }: { project: (typeof projects)[number]; i: number }) {
   const ref = useRef<HTMLDivElement>(null);
 
   const handleMouse = (e: MouseEvent<HTMLDivElement>) => {
@@ -108,6 +56,16 @@ function BrowserMockup({ project, i }: { project: Project; i: number }) {
         <p className="font-serif text-lg text-soft-cream group-hover:text-clay transition-colors">{project.title}</p>
         <p className="text-xs text-muted-sage mt-1 font-mono">{project.niche}</p>
         <p className="text-xs text-muted-sage/70 mt-1 leading-relaxed">{project.prd}</p>
+        {project.liveUrl !== "#" && (
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-3 text-xs text-clay border border-clay/30 px-4 py-1.5 rounded-full hover:bg-clay/10 transition-all"
+          >
+            Visit Live Site &rarr;
+          </a>
+        )}
       </div>
     </motion.div>
   );
@@ -128,7 +86,7 @@ export default function ProjectsPreviewSection() {
           <p className="text-xs uppercase tracking-[0.3em] text-clay text-center mb-4">Our Work</p>
           <h2 className="font-serif text-3xl md:text-5xl text-center text-soft-cream mb-4">Featured Projects</h2>
           <p className="text-muted-sage text-center max-w-md mx-auto">
-            Six industries. Six solutions. One standard of quality.
+            Real solutions. Real industries. Real results.
           </p>
         </ScrollReveal>
       </div>

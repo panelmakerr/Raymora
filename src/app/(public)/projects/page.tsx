@@ -1,61 +1,11 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import projects from "@/data/projects";
 
 export const metadata: Metadata = {
   title: "Projects — Raymora",
   description: "A curated selection of premium digital experiences built by Raymora.",
 };
-
-const projects = [
-  {
-    title: "ShopWave",
-    niche: "E-Commerce / Retail",
-    img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=75",
-    prd: "Multi-vendor marketplace with real-time inventory management, AI-powered product recommendations, and seamless checkout experience.",
-    tech: "Next.js, Stripe, Supabase, Algolia",
-    year: "2025",
-  },
-  {
-    title: "MediTrack",
-    niche: "HealthTech",
-    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=75",
-    prd: "Patient management dashboard with appointment scheduling, EMR integration, telemedicine, and analytics.",
-    tech: "React, Node.js, PostgreSQL, WebRTC",
-    year: "2025",
-  },
-  {
-    title: "PaySwift",
-    niche: "FinTech",
-    img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=75",
-    prd: "Digital payment platform with instant transfers, budgeting tools, multi-currency support, and fraud detection.",
-    tech: "Next.js, Plaid, Stripe, Supabase",
-    year: "2025",
-  },
-  {
-    title: "PropVue",
-    niche: "Real Estate / PropTech",
-    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=75",
-    prd: "Property listing portal with virtual 3D tours, AI-powered pricing estimates, and agent CRM.",
-    tech: "Next.js, Mapbox, TensorFlow, Supabase",
-    year: "2024",
-  },
-  {
-    title: "LearnCraft",
-    niche: "EdTech",
-    img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=75",
-    prd: "Online learning platform with live classes, progress tracking, interactive assessments, and certification.",
-    tech: "React, WebRTC, Express, MongoDB",
-    year: "2024",
-  },
-  {
-    title: "InsightPro",
-    niche: "B2B SaaS / Analytics",
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=75",
-    prd: "Business intelligence dashboard with real-time data visualization, custom reports, and team collaboration.",
-    tech: "Next.js, D3.js, ClickHouse, Supabase",
-    year: "2024",
-  },
-];
 
 export default function ProjectsPage() {
   return (
@@ -64,7 +14,7 @@ export default function ProjectsPage() {
         <p className="text-xs uppercase tracking-[0.3em] text-clay mb-4">Portfolio</p>
         <h1 className="font-serif text-4xl md:text-6xl text-soft-cream mb-4">Our Projects</h1>
         <p className="text-muted-sage mb-16 max-w-lg">
-          Six industries. Six solutions. One standard of quality.
+          Each project is a real product built for a specific industry and problem.
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -84,6 +34,16 @@ export default function ProjectsPage() {
               <p className="text-sm text-muted-sage mt-2 leading-relaxed">{p.prd}</p>
               <p className="text-xs text-muted-sage/60 mt-2 font-mono">{p.tech}</p>
               <p className="text-xs text-muted-sage/40 mt-1">{p.year}</p>
+              {p.liveUrl !== "#" && (
+                <a
+                  href={p.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-xs text-clay border border-clay/30 px-4 py-1.5 rounded-full hover:bg-clay/10 transition-all"
+                >
+                  Visit Live Site &rarr;
+                </a>
+              )}
             </div>
           ))}
         </div>
