@@ -16,7 +16,7 @@ const projects: Project[] = [
     prd: "Multi-vendor marketplace with real-time inventory management, AI-powered product recommendations, and seamless checkout experience.",
     tech: "Next.js, Stripe, Supabase, Algolia",
     year: "2025",
-    liveUrl: "/Projects/ShopWave",
+    liveUrl: "https://github.com/panelmakerr/ShopWave",
   },
   {
     title: "MediTrack",
@@ -25,7 +25,7 @@ const projects: Project[] = [
     prd: "Patient management dashboard with appointment scheduling, EMR integration, telemedicine, and analytics.",
     tech: "React, Node.js, PostgreSQL, WebRTC",
     year: "2025",
-    liveUrl: "/Projects/MediTrack",
+    liveUrl: "https://github.com/panelmakerr/MediTrack",
   },
   {
     title: "PaySwift",
@@ -34,7 +34,7 @@ const projects: Project[] = [
     prd: "Digital payment platform with instant transfers, budgeting tools, multi-currency support, and fraud detection.",
     tech: "Next.js, Plaid, Stripe, Supabase",
     year: "2025",
-    liveUrl: "/Projects/PaySwift",
+    liveUrl: "https://github.com/panelmakerr/PaySwift",
   },
   {
     title: "PropVue",
@@ -43,7 +43,7 @@ const projects: Project[] = [
     prd: "Property listing portal with virtual 3D tours, AI-powered pricing estimates, and agent CRM.",
     tech: "Next.js, Mapbox, TensorFlow, Supabase",
     year: "2024",
-    liveUrl: "/Projects/PropVue",
+    liveUrl: "https://github.com/panelmakerr/PropVue",
   },
   {
     title: "LearnCraft",
@@ -52,7 +52,7 @@ const projects: Project[] = [
     prd: "Online learning platform with live classes, progress tracking, interactive assessments, and certification.",
     tech: "React, WebRTC, Express, MongoDB",
     year: "2024",
-    liveUrl: "/Projects/LearnCraft",
+    liveUrl: "https://github.com/panelmakerr/LearnCraft",
   },
   {
     title: "InsightPro",
@@ -61,7 +61,7 @@ const projects: Project[] = [
     prd: "Business intelligence dashboard with real-time data visualization, custom reports, and team collaboration.",
     tech: "Next.js, D3.js, ClickHouse, Supabase",
     year: "2024",
-    liveUrl: "/Projects/InsightPro",
+    liveUrl: "https://github.com/panelmakerr/InsightPro",
   },
 ];
 
